@@ -1,0 +1,73 @@
+/* Style de toute la page*/
+body {
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; 
+    color: #fff;
+}
+
+/* Le conteneur de jeu*/
+.game-container {
+    text-align: center;
+    background-color: #1e1e1e; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); 
+}
+
+/* Espace info du jeu*/
+.game-info {
+    margin-bottom: 20px;
+}
+
+/* Mise en place des grid pour la table de jeu*/
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+/* carte */
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #333; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #00bfff;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* carte retourner*/
+.card.flipped {
+    transform: rotateY(180deg);
+    background-color: #2ecc71; 
+}
+
+/* Bouton recommencer*/
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+}
+/* hover du bouton recommencer */
+button:hover {
+    background-color: #2980b9; 
+    transform: scale(1.05); 
+}
